@@ -6,10 +6,12 @@ import jakarta.persistence.Table;
 
 import java.util.Objects;
 
+//Mapeando como entidade e tabela
 @Entity
 @Table(name = "tb_belonging")
 public class Belonging {
 
+    //Utilizando um ID de chaves estrangeiras da tabela relacionamento
     @EmbeddedId
     private BelongingPK id = new BelongingPK();
 
@@ -18,12 +20,14 @@ public class Belonging {
     public Belonging(){
     }
 
+    //Construtor setando os valores para a tabela relacionamento
     public Belonging(Game game, GameList list, Integer position) {
         id.setGame(game);
         id.setList(list);
         this.position = position;
     }
 
+    //Getters e Setters
     public BelongingPK getId() {
         return id;
     }
@@ -40,6 +44,7 @@ public class Belonging {
         this.position = position;
     }
 
+    //Para repeticoes
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -6,9 +6,11 @@ import jakarta.persistence.ManyToOne;
 
 import java.util.Objects;
 
+//Mapeando a classe para ser embeddada na tabela relacionamento como id
 @Embeddable
 public class BelongingPK {
 
+    // Cardinalidade N:N
     @ManyToOne
     @JoinColumn(name = "game_id")
     private Game game;
@@ -20,11 +22,13 @@ public class BelongingPK {
     public BelongingPK(){
     }
 
+    //Construtor
     public BelongingPK(Game game, GameList list){
         this.game = game;
         this.list = list;
     }
 
+    //Getters e Setters
     public Game getGame() {
         return game;
     }
@@ -41,6 +45,7 @@ public class BelongingPK {
         this.list = list;
     }
 
+    //Para repeticoes
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

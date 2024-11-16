@@ -37,6 +37,7 @@ public class GameList{
         this.name = name;
     }
 
+    //Para evitar os dados repetidos
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

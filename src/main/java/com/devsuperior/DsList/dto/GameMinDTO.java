@@ -12,6 +12,7 @@ public class GameMinDTO {
     public GameMinDTO(){
     }
 
+    //Construtor que utiliza a entidade Game como parametro
     public GameMinDTO(Game entity) {
         id = entity.getId();
         title = entity.getTitle();
@@ -20,6 +21,7 @@ public class GameMinDTO {
         shortDescription = entity.getShortDescription();
     }
 
+    //Getters e setters
     public Long getId() {
         return id;
     }
