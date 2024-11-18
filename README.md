@@ -29,10 +29,12 @@ Este é o repositório do **back-end** de um projeto de lista de jogos, desenvol
 ## 📦 Como executar o projeto
 
 1. Clone o repositório:
-   `git clone https://github.com/marioluka/Projeto-Back-end-DsList.git
-   cd Projeto-Back-end-DsList`
+   ```
+   git clone https://github.com/marioluka/Projeto-Back-end-DsList.git
+   cd Projeto-Back-end-DsList
+   ```
    
-2. Configure o arquivo application.properties ou application.yml:
+3. Configure o arquivo application.properties ou application.yml:
 
    #### H2(desenvolvimento):
       ```
@@ -49,11 +51,11 @@ Este é o repositório do **back-end** de um projeto de lista de jogos, desenvol
       spring.datasource.password=sua_senha
       spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
       ```
-3. Execute o projeto com Maven:
+4. Execute o projeto com Maven:
    
    `mvn spring-boot:run`
    
-4. Acesse no seu navegador:
+5. Acesse no seu navegador:
 
    `http://localhost:8080`
 
