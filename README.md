@@ -35,11 +35,11 @@ Este é o repositório do **back-end** de um projeto de lista de jogos, desenvol
 
 2. Configure o arquivo application.properties ou application.yml:
    #### H2(desenvolvimento):
-    spring.datasource.url=jdbc:h2:mem:dslist
-    spring.datasource.driverClassName=org.h2.Driver
-    spring.datasource.username=sa
-    spring.datasource.password=
-    spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+       spring.datasource.url=jdbc:h2:mem:dslist
+       spring.datasource.driverClassName=org.h2.Driver
+       spring.datasource.username=sa
+       spring.datasource.password=
+       spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
 
 
   #### PostgreSQL/SQL(produção):
@@ -49,9 +49,10 @@ Este é o repositório do **back-end** de um projeto de lista de jogos, desenvol
     spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
 
 3. Execute o projeto com Maven:
-  mvn spring-boot:run
+#
+      mvn spring-boot:run
 
-4. Acesse a aplicação no navegador:
+5. Acesse a aplicação no navegador:
    http://localhost:8080
 
    
