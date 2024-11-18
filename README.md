@@ -15,10 +15,10 @@ Este é o repositório do **back-end** de um projeto de lista de jogos, desenvol
 ## ⚙️ Funcionalidades
 
 - [x] Listar todos os jogos.
-- [x] Move os jogos dentro de uma lista.
-- [x] Adicionar novos jogos à lista.
-- [x] Atualizar informações de jogos.
-- [x] Remover jogos da lista.
+- [x] Busca detalhes de um jogo pelo ID.
+- [x] Lista todas as listas de jogos.
+- [x] Lista os jogos de uma lista específica.
+- [x] Move jogos dentro de uma lista.
 
 ## 🛠️ Pré-requisitos
 
@@ -29,37 +29,40 @@ Este é o repositório do **back-end** de um projeto de lista de jogos, desenvol
 ## 📦 Como executar o projeto
 
 1. Clone o repositório:
-   ```bash
-   git clone https://github.com/marioluka/Projeto-Back-end-DsList.git
-   cd Projeto-Back-end-DsList
-
-2. Configure o arquivo application.properties ou application.yml:
-   #### H2(desenvolvimento):
-       spring.datasource.url=jdbc:h2:mem:dslist
-       spring.datasource.driverClassName=org.h2.Driver
-       spring.datasource.username=sa
-       spring.datasource.password=
-       spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
-
-
-  #### PostgreSQL/SQL(produção):
-    spring.datasource.url=jdbc:postgresql://localhost:5432/dslist
-    spring.datasource.username=seu_usuario
-    spring.datasource.password=sua_senha
-    spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
-
-3. Execute o projeto com Maven:
-#
-      mvn spring-boot:run
-
-5. Acesse a aplicação no navegador:
-   http://localhost:8080
-
+   `git clone https://github.com/marioluka/Projeto-Back-end-DsList.git
+   cd Projeto-Back-end-DsList`
    
-##🧪 Endpoints
-  GET /games
-  GET /games/{id}
-  GET /lists
-  GET /lists/{id}/games
-  POST /lists/{id}/replacement
+2. Configure o arquivo application.properties ou application.yml:
 
+   #### H2(desenvolvimento):
+      ```
+      spring.datasource.url=jdbc:h2:mem:dslist
+      spring.datasource.driverClassName=org.h2.Driver
+      spring.datasource.username=sa
+      spring.datasource.password=
+      spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+      ```
+   #### PostgreSQL/SQL(produção):
+      ```
+      spring.datasource.url=jdbc:postgresql://localhost:5432/dslist
+      spring.datasource.username=seu_usuario
+      spring.datasource.password=sua_senha
+      spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+      ```
+3. Execute o projeto com Maven:
+   
+   `mvn spring-boot:run`
+   
+4. Acesse no seu navegador:
+
+   `http://localhost:8080`
+
+## 🧪 Endpoints
+
+| Método | Endpoint                   | Descrição                                |
+|--------|-----------------------------|------------------------------------------|
+| GET    | `/games`                   | Lista todos os jogos.                    |
+| GET    | `/games/{id}`              | Busca detalhes de um jogo pelo ID.       |
+| GET    | `/lists`                   | Lista todas as listas de jogos.          |
+| GET    | `/lists/{id}/games`        | Lista os jogos de uma lista específica.  |
+| POST   | `/lists/{id}/replacement`  | Move jogos dentro de uma lista.          |
